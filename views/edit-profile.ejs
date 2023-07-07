@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Feedback page</title>
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+<body style="background-image: url(https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg);background-size: cover;"> -->
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+<body style="background-image: url(https://t3.ftcdn.net/jpg/03/51/48/34/240_F_351483436_vksaeJ7svAcp6eWZpfxI5aSS2DsJrlgd.jpg);background-size:cover;">
+    <div class="container mt-4 shadow-lg">
+        <div class="row">
+         <div class="col-md-3"></div>
+  <!-- <div class="container ">
+    <div class="row">
+      <div class="col-md-3"></div> -->
+      <div class="col-md-6"> 
+        <h2 class="text-white">Edit-Profile</h2>
+        <p class="text-white">Edit your profile guys</p>
+        <hr>
+         <form>
+
+            <form action="/edit-profile" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="contact">Contact:</label>
+                    <input type="text" class="form-label" id="contact" name="contact" value="<%= user.contact %>" placeholder="Enter contact">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-label" id="city" name="city" value="<%= user.city %>" placeholder="Enter city">
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="id" value="<%= user.id %>">
+                    <!-- <input type="submit" value="Submit" > -->
+                    <button type="submit" class="btn btn-primary" value = "submit">Submit</button>
+                </div>
+            </form>
+      </div>
+      
+    </div>
+    
+  </div>
+
+
+</body>
+</html> 
+

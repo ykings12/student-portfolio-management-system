@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Details</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+<body style="background-image: url(https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg);background-size: cover;">
+
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"> 
+        <h2 class="text-white">Project Details</h2>
+        <!-- <p class="text-white">Edit your profile guys</p> -->
+        <hr>
+        <!-- <form> -->
+
+            <form action="/project" method="POST">
+                <div class="form-group" style="display:none;">
+                    <!-- <label class="form-label" for="id">Project Name:</label> -->
+                    <input type="text" class="form-label" id="id" name="id" value="<%= user.id %>" >
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="name">Project Name:</label>
+                    <input type="text" class="form-label" id="name" name="name" value="<%= user.name %>" placeholder="Edit Project Name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="description">Description:</label>
+                    <input type="text" class="form-label" id="description" name="description" value="<%= user.description %>" placeholder="Edit Description">
+                </div>
+                <div class="form-group">
+                    <label for="github" class="form-label">GitHub URL:</label>
+                    <input type="text" class="form-label" id="github" name="github" value="<%= user.github %>" placeholder="Edit Github">
+                </div>
+                <div class="form-group">
+                    <!-- <input type="hidden" name="id" value="<%= user.id %>"> -->
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+    <!-- <h4 class="text-white">Feedback type</h4>
+    <div class="row ">
+      <div class="col-md-4 text-white" >
+    <input type="radio" name="feed" class="pointer"  >&nbsp;&nbsp;<label>Comments</label>    
+      </div>
+            <div class="col-md-4">
+    <input type="radio" name="feed" >&nbsp;&nbsp;<label>Bug Reports</label>    
+      </div>      <div class="col-md-4">
+    <input type="radio" name="feed" >&nbsp;&nbsp;<label>Questions</label>    
+      </div>
+    </div> -->
+<!-- 
+      <div class="form-group mt-3 mb-3" >
+    <label class="form-label">Full Name</label>
+    <input type="text" class="form-control " required="">
+  </div>
+  <div class="form-group mb-2">
+    <label  class="form-label">Email</label>
+    <input type="Email" class="form-control" required="">
+  </div>
+    <div class="form-group mb-2">
+    <label  class="form-label">Describe Feedback:</label>
+    <textarea rows="4" class="form-control" required=""></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit feedback</button> -->
+<!-- </form> -->
+        
+      </div>
+      
+    </div>
+    
+  </div>
+
+
+</body>
+</html>
+
+

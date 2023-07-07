@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Profile</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#profileInfo {
+  margin-right: 20px;
+}
+
+#profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#errorMsg {
+  text-align: center;
+  color: red;
+}
+
+  </style>
+</head>
+<body>
+  <h1>View Profile</h1>
+  <div id="profileContainer">
+    <div id="profileInfo">
+      <h2 id="profileName"></h2>
+      <p id="profileEmail"></p>
+      <p id="profileBio"></p>
+    </div>
+    <img id="profileImage" src="" alt="Profile Image">
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const profileName = document.getElementById('profileName');
+  const profileEmail = document.getElementById('profileEmail');
+  const profileBio = document.getElementById('profileBio');
+  const profileImage = document.getElementById('profileImage');
+
+  // Make a request to the backend to fetch the profile data
+  fetch('/profile')
+    .then(response => response.json())
+    .then(data => {
+      profileName.textContent = data.name;
+      profileEmail.textContent = data.email;
+      profileBio.textContent = data.bio;
+      profileImage.src = data.image;
+    })
+    .catch(error => {
+      const errorMsg = document.createElement('p');
+      errorMsg.textContent = 'Failed to fetch profile data.';
+      errorMsg.id = 'errorMsg';
+      document.body.appendChild(errorMsg);
+      console.error(error);
+    });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student list</title>
+</head>
+<body>
+
+    <h1>Search Here </h1>
+
+    <form action="/search">
+        <input type="search" name="name" placeholder="Search Name">
+        <input type="search" name="enroll" placeholder="Search Enrollment">
+        <input type="search" name="email" placeholder="Search email">
+        <!-- <input type="search" name="mobile" placeholder="Search mobile number"> -->
+        <input type="submit" value = "search">
+        
+    </form>
+
+    <h1>Students List</h1>
+
+    <table border="1" width = "100%">
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Enrollment</th>
+            <th>Email</th>
+            <th>Nickname</th> 
+        </tr>
+
+        <% if(student.length > 0) { %>
+
+            <% for(var i =0; i<student.length; i++) { %>
+                <tr>
+                    <td><%- student[i].id %></td>
+                    <td><%- student[i].name %></td>
+                    <td><%- student[i].enroll %></td>
+                    <td><%- student[i].email %></td>
+                    <td><%- student[i].nickname %></td>
+                    
+                </tr>
+                <% } %>
+        <% }else{ %>
+                <tr><td>Student Not Found !</td></tr>
+         <% } %>
+
+    </table>
+</body>
+</html>
